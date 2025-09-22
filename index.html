@@ -410,7 +410,7 @@
     </footer>
 
     <!-- MODAL -->
-    <div class="modal-overlay is-hidden" id="contact-modal">
+    <div class="modal-overlay is-open" id="contact-modal">
         <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
             <button type="button" class="modal-close" data-close-modal aria-label="Close dialog">
                 <svg class="modal-close__icon" width="8" height="8" aria-hidden="true">
@@ -458,16 +458,17 @@
                     </div>
                 </div>
 
-                <div>
-                    <label class="consent-line">
-                        <input type="checkbox" class="checkbox-input" required>
-                        <svg class="cheackbox-icon" width="10" height="8" aria-hidden="true">
-                            <use href="./images/icons.svg#icon-checkbox"></use>
-                        </svg>
-                        <span class="custom-checkbox">
-                            I accept the terms and conditions of the
-                            <a href="#" class="link-privacy custom-checkbox">Privacy Policy</a>
+                <div class="modal-field check-field">
+                    <input class="input-check visually-hidden" id="user-privacy" name="user-privacy" type="checkbox"
+                        value="true" />
+                    <label class="input-check-text" for="user-privacy">
+                        <span class="check-empty">
+                            <svg class="input-check-icon" width="10" height="8">
+                                <use href="./images/icons.svg#icon-check"></use>
+                            </svg>
                         </span>
+                        I accept the terms and conditions of the
+                        <a class="input-check-link" href>Privacy Policy</a>
                     </label>
                 </div>
 
