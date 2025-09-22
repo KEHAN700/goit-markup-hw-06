@@ -39,17 +39,13 @@
             </address>
         </div>
     </header>
-
     <main>
-        <!-- Hero Section -->
         <section class="hero-section">
             <div class="hero-content">
                 <h1 class="hero-title">Effective Solutions<br>for Your Business</h1>
                 <button type="button" class="hero-btn" data-open-modal>Order Service</button>
             </div>
         </section>
-
-        <!-- Features Section -->
         <section class="features-section">
             <div class="container">
                 <h2 class="visually-hidden">Features</h2>
@@ -97,8 +93,6 @@
                 </ul>
             </div>
         </section>
-
-        <!-- Team Section -->
         <section class="team-section">
             <div class="container">
                 <h2 class="team-title">Our Team</h2>
@@ -254,8 +248,6 @@
                 </ul>
             </div>
         </section>
-
-        <!-- Portfolio Section -->
         <section class="portfolio-section" id="portfolio">
             <div class="container">
                 <h2 class="portfolio-title">Our Portfolio</h2>
@@ -348,7 +340,6 @@
             </div>
         </section>
     </main>
-
     <footer class="footer-section">
         <div class="footer-container">
             <div class="footer-left">
@@ -408,8 +399,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- MODAL -->
     <div class="modal-overlay is-open" id="contact-modal">
         <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
             <button type="button" class="modal-close" data-close-modal aria-label="Close dialog">
@@ -420,44 +409,42 @@
             <p class="text-modal" id="modal-title">Leave your contacts and we will call you back</p>
             <form class="modal-form" novalidate>
                 <div class="field-block">
-                    <label class="modal-label" for="name-input">Name</label>
-                    <div class="input-with-icon">
-                        <svg class="input-icon" width="18" height="18" aria-hidden="true">
+                    <label class="modal-label" for="user-name">Name</label>
+                    <div class="field-wrapper">
+                        <input type="text" id="user-name" name="user-name" class="field-input" required
+                            autocomplete="name">
+                        <svg class="field-icon" width="18" height="24" aria-hidden="true">
                             <use href="./images/icons.svg#icon-man"></use>
                         </svg>
-                        <input type="text" class="modal-input" id="name-input" name="name" required autocomplete="name">
                     </div>
                 </div>
-
                 <div class="field-block">
-                    <label class="modal-label" for="phone-input">Phone</label>
-                    <div class="input-with-icon">
-                        <svg class="input-icon" width="18" height="24" aria-hidden="true">
+                    <label class="modal-label" for="user-phone">Phone</label>
+                    <div class="field-wrapper">
+                        <input type="text" id="user-phone" name="user-phone" class="field-input" required
+                            autocomplete="tel">
+                        <svg class="field-icon" width="18" height="24" aria-hidden="true">
                             <use href="./images/icons.svg#icon-Vector"></use>
                         </svg>
-                        <input type="tel" class="modal-input" id="phone-input" name="phone" required autocomplete="tel">
                     </div>
                 </div>
-
                 <div class="field-block">
-                    <label class="modal-label" for="email-input">Email</label>
-                    <div class="input-with-icon">
-                        <svg class="input-icon" width="18" height="24" aria-hidden="true">
+                    <label class="modal-label" for="user-email">Email</label>
+                    <div class="field-wrapper">
+                        <input type="email" id="user-email" name="user-email" class="field-input" required
+                            autocomplete="email">
+                        <svg class="field-icon" width="18" height="24" aria-hidden="true">
                             <use href="./images/icons.svg#icon-email-black"></use>
                         </svg>
-                        <input type="email" class="modal-input" id="email-input" name="email" required
-                            autocomplete="email">
                     </div>
                 </div>
-
                 <div class="field-block">
-                    <label class="modal-label" for="comment-input">Comment</label>
-                    <div class="input-with-icon textarea-icon">
-                        <textarea id="comment-input" name="comment" class="modal-textarea" placeholder="Text input"
+                    <label class="modal-label" for="user-comment">Comment</label>
+                    <div class="textarea-wrapper">
+                        <textarea id="user-comment" name="user-comment" class="field-textarea" placeholder="Text input"
                             rows="5"></textarea>
                     </div>
                 </div>
-
                 <div class="modal-field check-field">
                     <input class="input-check visually-hidden" id="user-privacy" name="user-privacy" type="checkbox"
                         value="true" />
@@ -471,7 +458,6 @@
                         <a class="input-check-link" href>Privacy Policy</a>
                     </label>
                 </div>
-
                 <button type="submit" class="modal-submit">Send</button>
             </form>
         </div>

@@ -5,7 +5,6 @@
     --hover: #404bbf;
     --cloud: #f4f4fd;
     --white: #fff;
-
     --modal-border: #b5b9bf;
     --modal-border-hover: #a8adb3;
     --modal-focus: var(--hover);
@@ -49,7 +48,6 @@ p {
     overflow: hidden;
 }
 
-/* HEADER */
 .header-section {
     background-color: #fff;
     border-bottom: 1px solid #e7e9fc;
@@ -149,7 +147,6 @@ p {
     color: var(--hover);
 }
 
-/* HERO */
 .hero-section {
     max-width: 1440px;
     margin: 0 auto;
@@ -195,7 +192,6 @@ p {
     background-color: var(--hover);
 }
 
-/* FEATURES */
 .features-section {
     padding: 120px 0;
 }
@@ -246,7 +242,6 @@ p {
     color: var(--slate);
 }
 
-/* TEAM */
 .team-section {
     padding: 120px 0;
     background-color: var(--cloud);
@@ -339,7 +334,6 @@ p {
     fill: var(--cloud);
 }
 
-/* PORTFOLIO */
 .portfolio-section {
     padding: 120px 0;
 }
@@ -437,7 +431,6 @@ p {
     margin: 0;
 }
 
-/* FOOTER */
 .footer-section {
     background: var(--navy);
     padding: 100px 0;
@@ -522,7 +515,6 @@ p {
     fill: var(--cloud);
 }
 
-/* MODAL */
 .modal-overlay {
     position: fixed;
     width: 100%;
@@ -530,7 +522,6 @@ p {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    position: fixed;
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.5);
@@ -542,7 +533,6 @@ p {
     opacity: 1;
     visibility: visible;
     pointer-events: all;
-
 }
 
 .modal-overlay:not(.is-hidden) {
@@ -569,55 +559,12 @@ p {
 
 .modal-close {
     --close-size: 32px;
-    /* легко менять размер */
-    --close-bg: #fff;
-    --close-bg-hover: var(--hover);
-    /* синий при hover/focus */
-    --close-border: var(--modal-border);
-    --close-border-hover: var(--hover);
-    --close-icon-color: #2e2f42;
-    --close-icon-color-hover: #fff;
-
-    position: absolute;
-    top: 24px;
-    right: 24px;
-    width: var(--close-size);
-    height: var(--close-size);
-    border: 1px solid var(--close-border);
-    border-radius: 50%;
-    background: var(--close-bg);
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    line-height: 1;
-    color: var(--close-icon-color);
-    /* управляем цветом иконки через color */
-    transition:
-        background-color .18s,
-        border-color .18s,
-        color .18s,
-        box-shadow .18s,
-        transform .12s;
-}
-
-
-/* Close button EXACTLY like mock (Normal / Hover) */
-.modal-close {
-    --close-size: 32px;
     --close-bg-normal: #eef1f8;
-    /* светлый фон круга (Normal) */
     --close-border-normal: #d2d7e2;
-    /* тонкая холодная граница */
     --close-bg-hover: var(--hover);
-    /* сплошной синий (Hover) */
     --close-x-normal: #2e2f42;
-    /* тёмный X */
     --close-x-hover: #ffffff;
-    /* белый X на синем */
     --close-focus-ring: 0 0 0 3px rgba(64, 75, 191, .35);
-
     position: absolute;
     top: 8px;
     right: 8px;
@@ -633,7 +580,6 @@ p {
     cursor: pointer;
     line-height: 1;
     color: var(--close-x-normal);
-    /* currentColor для X */
     -webkit-tap-highlight-color: transparent;
     transition:
         background-color .18s,
@@ -643,28 +589,16 @@ p {
         box-shadow .18s;
 }
 
-/* SVG X */
 .modal-close__icon {
     width: 8px;
     height: 8px;
     width: 50%;
     stroke: rgba(0, 0, 0, 0.1);
-    /* пропорционально кнопке */
     height: 50%;
     display: block;
     pointer-events: none;
 }
 
-/* Линии X (inline вариант) */
-.modal-close__icon path {
-    stroke: currentColor;
-    stroke-width: 2.1;
-    fill: none;
-    vector-effect: non-scaling-stroke;
-    transition: stroke .18s;
-}
-
-/* Hover (и focus мышкой) */
 .modal-close:hover,
 .modal-close:focus {
     background-color: #404bbf;
@@ -677,17 +611,14 @@ p {
     outline: none;
 }
 
-/* Клавиатурный фокус: кольцо + уже “hover”-цвет */
 .modal-close:focus-visible {
     box-shadow: var(--close-focus-ring);
 }
 
-/* Active (нажатие) лёгкий feedback */
 .modal-close:active {
     transform: scale(.92);
 }
 
-/* Disabled (на будущее) */
 .modal-close:disabled {
     opacity: .55;
     cursor: not-allowed;
@@ -713,6 +644,7 @@ p {
     margin-bottom: 8px;
     display: flex;
     gap: 7px;
+    flex-direction: column;
 }
 
 .modal-label {
@@ -724,80 +656,96 @@ p {
     color: #8e8f99;
 }
 
-.input-with-icon {
+.field-wrapper {
     position: relative;
+    width: 100%;
 }
 
-.modal-input,
-.modal-textarea {
-    outline: transparent;
+.field-input {
     width: 100%;
     height: 40px;
     font: inherit;
     font-size: 14px;
     line-height: 1.4;
     color: #1f2328;
-    background: #fff;
-    border: 1px solid var(--modal-border);
+    background: transparent;
+    border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
-    padding: 0 14px 0 38px;
+    padding-left: 38px;
+    padding-right: 14px;
     box-sizing: border-box;
-    transition: border-color .18s, box-shadow .18s;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-input:hover,
-.modal-textarea:hover {
-    border-color: var(--modal-border-hover);
+.field-input:hover {
+    border-color: #4d5ae5;
 }
 
-.modal-input:focus,
-.modal-textarea:focus {
-    outline: none;
-    border-color: var(--modal-focus);
-    box-shadow: var(--modal-focus-shadow);
+.field-input:focus {
+    border-color: #4d5ae5;
 }
 
-.input-icon {
+.field-icon {
     position: absolute;
-    left: 12px;
+    left: 16px;
     top: 50%;
     transform: translateY(-50%);
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 24px;
     fill: #8e8f99;
     pointer-events: none;
-    transition: fill .18s;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-with-icon:focus-within .input-icon {
-    fill: var(--modal-focus);
+.field-wrapper:focus-within .field-icon {
+    fill: #4d5ae5;
 }
 
-.textarea-icon .input-icon {
-    top: 14px;
-    transform: none;
+.textarea-wrapper {
+    position: relative;
+    width: 100%;
 }
 
-.modal-textarea {
-    min-height: 120px;
+.field-textarea {
+    width: 100%;
+    height: 120px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    background-color: transparent;
     padding: 8px 16px;
+    outline: transparent;
     resize: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-sizing: border-box;
+}
+
+.field-textarea:hover {
+    border-color: #4d5ae5;
+}
+
+.field-textarea:focus {
+    border-color: #4d5ae5;
 }
 
 .modal-submit {
-    align-self: center;
-    min-width: 140px;
-    height: 44px;
+    display: block;
+    min-width: 169px;
+    height: 56px;
     border: none;
     border-radius: 4px;
     background: var(--iris);
     color: #fff;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
     letter-spacing: 0.04em;
     cursor: pointer;
-    margin-top: 8px;
-    transition: background-color .25s;
+    margin: 8px auto 0;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-submit:hover,
@@ -805,22 +753,32 @@ p {
     background: var(--hover);
 }
 
-.custom-checkbox {
+.input-check-text {
     font-size: 12px;
     line-height: 1.16667;
     letter-spacing: 0.04em;
     color: #8e8f99;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
 
-.link-privacy {
+.input-check-link {
     font-size: 12px;
     line-height: 1.16667;
     letter-spacing: 0.04em;
     color: var(--iris);
-    margin-left: 4px;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color .15s;
 }
 
-.checkbox-input {
+.input-check-link:hover,
+.input-check-link:focus {
+    color: var(--hover);
+}
+
+.input-check {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -830,75 +788,37 @@ p {
     pointer-events: none;
 }
 
-.cheackbox-icon {
-    margin-top: 0;
-    display: flex;
+.check-empty {
+    display: inline-flex;
     width: 16px;
     height: 16px;
-    box-sizing: border-box;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
     background: #fff;
-    flex-shrink: 0;
-    display: inline-block;
-    justify-items: center;
-    margin-top: 1px;
-    transition: background-color .15s, border-color .15s;
-}
-
-.cheackbox-icon use {
-    opacity: 0;
-    fill: #fff;
-    /* Цвет галочки */
-    transition: opacity .15s, transform .15s;
-    transform: scale(.6);
-    transform-origin: center;
-}
-
-.consent-line:hover .cheackbox-icon {
-    border-color: var(--hover);
-}
-
-.checkbox-input:checked+.cheackbox-icon {
-    background: var(--iris);
-    border-color: var(--iris);
-}
-
-.consent-line {
-    display: inline-flex;
     align-items: center;
-    gap: 8px;
+    justify-content: center;
+    transition: background-color .15s, border-color .15s, fill .15s;
 }
 
-.checkbox-input:checked+.cheackbox-icon use {
-    opacity: 1;
-    transform: scale(1);
+.input-check-icon {
+    fill: var(--cloud);
 }
 
-.consent-line:hover .checkbox-input:checked+.cheackbox-icon {
-    background: var(--hover);
-    border-color: var(--hover);
+.input-check-icon use {
+    fill: currentColor;
 }
 
-.checkbox-input:focus-visible+.cheackbox-icon {
+.input-check:checked+.input-check-text .check-empty {
+    background-color: var(--hover);
+    border: none;
+    fill: var(--cloud);
+}
+
+.input-check:focus-visible+.input-check-text .check-empty {
     outline: 2px solid var(--hover);
     outline-offset: 2px;
 }
 
-/* Ссылка */
-.link-privacy {
-    color: var(--iris);
-    text-decoration: underline;
-    text-underline-offset: 2px;
-    transition: color .15s;
-}
-
-.link-privacy:hover,
-.link-privacy:focus {
-    color: var(--hover);
-}
-
-/* ===== Subscribe (input + button + icon) ===== */
 .subscribe {
     display: flex;
     flex-direction: column;
@@ -920,7 +840,6 @@ p {
     gap: 24px;
     flex-wrap: nowrap;
 }
-
 
 .subscribe-field {
     display: block;
