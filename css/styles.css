@@ -153,7 +153,9 @@ p {
     max-width: 1440px;
     margin: 0 auto;
     height: 600px;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/office.jpg");
+    background-image:
+        linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url("../images/office.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -176,7 +178,7 @@ p {
     min-width: 169px;
     height: 56px;
     border: none;
-    background-color: var(--iris);
+    background: var(--iris);
     border-radius: 4px;
     cursor: pointer;
     font-weight: 500;
@@ -189,7 +191,7 @@ p {
 
 .hero-btn:hover,
 .hero-btn:focus {
-    background-color: var(--hover);
+    background: var(--hover);
 }
 
 /* FEATURES */
@@ -272,7 +274,9 @@ p {
 .team-card {
     width: calc((100% - 72px)/4);
     border-radius: 0 0 4px 4px;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
     background: #fff;
     display: flex;
     flex-direction: column;
@@ -314,7 +318,7 @@ p {
 .team-social-link {
     width: 100%;
     height: 100%;
-    background-color: var(--iris);
+    background: var(--iris);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -324,7 +328,7 @@ p {
 
 .team-social-link:hover,
 .team-social-link:focus {
-    background-color: var(--hover);
+    background: var(--hover);
 }
 
 .footer-social-icon,
@@ -367,7 +371,9 @@ p {
     flex-direction: column;
     align-items: center;
     position: relative;
-    box-shadow: 0 2px 1px rgba(46, 47, 66, 0.08), 0 1px 1px rgba(46, 47, 66, 0.16), 0 1px 6px rgba(46, 47, 66, 0.08);
+    box-shadow: 0 2px 1px rgba(46, 47, 66, 0.08),
+        0 1px 1px rgba(46, 47, 66, 0.16),
+        0 1px 6px rgba(46, 47, 66, 0.08);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
 }
@@ -386,7 +392,7 @@ p {
     letter-spacing: 0.02em;
     color: var(--cloud);
     padding: 40px 32px;
-    background-color: var(--iris);
+    background: var(--iris);
     height: 100%;
     width: 100%;
     transform: translateY(100%);
@@ -498,7 +504,7 @@ p {
 .footer-social-link {
     width: 100%;
     height: 100%;
-    background-color: var(--iris);
+    background: var(--iris);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -508,14 +514,14 @@ p {
 
 .footer-social-link:hover,
 .footer-social-link:focus {
-    background-color: #31d0aa;
+    background: #31d0aa;
 }
 
 .footer-icon-social {
     fill: var(--cloud);
 }
 
-/* SUBSCRIBE */
+/* SUBSCRIBE (footer button + svg conditions) */
 .subscribe {
     display: flex;
     flex-direction: column;
@@ -630,7 +636,7 @@ p {
     pointer-events: none;
     top: 0;
     left: 0;
-    background-color: rgba(46, 47, 66, 0.4);
+    background: rgba(46, 47, 66, 0.4);
     display: none;
     z-index: 999;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -678,7 +684,7 @@ p {
     padding: 0;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    background-color: #e7e9fc;
+    background: #e7e9fc;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -701,7 +707,7 @@ p {
 
 .modal-close:hover,
 .modal-close:focus {
-    background-color: var(--hover);
+    background: var(--hover);
     border: none;
     color: #ffffff;
     outline: none;
@@ -815,7 +821,7 @@ p {
     color: rgba(46, 47, 66, 0.4);
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
-    background-color: transparent;
+    background: transparent;
     padding: 8px 16px;
     outline: transparent;
     resize: none;
@@ -935,7 +941,7 @@ p {
 }
 
 .input-check:checked+.input-check-text .check-empty {
-    background-color: var(--hover);
+    background: var(--hover);
     border: none;
     fill: var(--cloud);
 }
@@ -960,8 +966,4 @@ p {
 
 .mb-24 {
     margin-bottom: 24px !important;
-}
-
-.inline-flex {
-    display: inline-flex !important;
 }
