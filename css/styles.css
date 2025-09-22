@@ -44,7 +44,7 @@ p {
     padding: 0;
     white-space: nowrap;
     clip-path: inset(100%);
-    clip: rect(0, 0, 0, 0);
+    clip: rect(0 0 0 0);
     overflow: hidden;
 }
 
@@ -153,9 +153,7 @@ p {
     max-width: 1440px;
     margin: 0 auto;
     height: 600px;
-    background-image:
-        linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url("../images/office.jpg");
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url("../images/office.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -274,9 +272,7 @@ p {
 .team-card {
     width: calc((100% - 72px)/4);
     border-radius: 0 0 4px 4px;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-        0px 1px 1px rgba(46, 47, 66, 0.16),
-        0px 2px 1px rgba(46, 47, 66, 0.08);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     background: #fff;
     display: flex;
     flex-direction: column;
@@ -371,9 +367,7 @@ p {
     flex-direction: column;
     align-items: center;
     position: relative;
-    box-shadow: 0 2px 1px rgba(46, 47, 66, 0.08),
-        0 1px 1px rgba(46, 47, 66, 0.16),
-        0 1px 6px rgba(46, 47, 66, 0.08);
+    box-shadow: 0 2px 1px rgba(46, 47, 66, 0.08), 0 1px 1px rgba(46, 47, 66, 0.16), 0 1px 6px rgba(46, 47, 66, 0.08);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
 }
@@ -551,7 +545,7 @@ p {
 .subscribe-input {
     width: 264px;
     height: 40px;
-    background-color: transparent;
+    background: transparent;
     border: 1px solid #ffffff;
     border-radius: 4px;
     padding-left: 16px;
@@ -639,7 +633,8 @@ p {
     background-color: rgba(46, 47, 66, 0.4);
     display: none;
     z-index: 999;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-overlay.is-open {
@@ -663,8 +658,7 @@ p {
     width: 408px;
     min-height: 584px;
     background: #fcfcfc;
-    box-shadow:
-        0 1px 1px rgba(0, 0, 0, 0.14),
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.14),
         0 1px 3px rgba(0, 0, 0, 0.12),
         0 2px 1px rgba(0, 0, 0, 0.2);
     padding: 72px 24px 24px 24px;
@@ -691,8 +685,7 @@ p {
     cursor: pointer;
     line-height: 1;
     -webkit-tap-highlight-color: transparent;
-    transition:
-        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     color: #2e2f42;
 }
@@ -737,6 +730,7 @@ p {
     margin: 0 0 16px 0;
 }
 
+/* FORM */
 .modal-form {
     display: flex;
     flex-direction: column;
@@ -746,8 +740,8 @@ p {
 .field-block {
     margin-bottom: 8px;
     display: flex;
-    gap: 7px;
     flex-direction: column;
+    gap: 7px;
 }
 
 .modal-label {
@@ -806,7 +800,7 @@ p {
 }
 
 .comment-block {
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -883,6 +877,7 @@ p {
     fill: #ffffff;
 }
 
+/* CHECKBOX */
 .input-check-text {
     font-size: 12px;
     line-height: 1.16667;
@@ -955,10 +950,18 @@ p {
 }
 
 /* UTILITIES */
+.mb-8 {
+    margin-bottom: 8px !important;
+}
+
 .mb-16 {
     margin-bottom: 16px !important;
 }
 
 .mb-24 {
     margin-bottom: 24px !important;
+}
+
+.inline-flex {
+    display: inline-flex !important;
 }
