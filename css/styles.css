@@ -521,7 +521,7 @@ p {
     fill: var(--cloud);
 }
 
-/* SUBSCRIBE (требования) */
+/* SUBSCRIBE */
 .subscribe {
     display: flex;
     flex-direction: column;
@@ -597,7 +597,7 @@ p {
     line-height: 1.5;
     letter-spacing: 0.04em;
     color: #fff;
-    transition: background-color .25s, transform .15s;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     white-space: nowrap;
     padding: 0 24px;
 }
@@ -671,8 +671,10 @@ p {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* CLOSE BUTTON */
 .modal-close {
     position: absolute;
     top: 24px;
@@ -691,8 +693,7 @@ p {
     -webkit-tap-highlight-color: transparent;
     transition:
         background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     color: #2e2f42;
 }
 
@@ -845,11 +846,8 @@ p {
 }
 
 .modal-submit {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    min-width: 165px;
+    display: block;
+    min-width: 169px;
     height: 56px;
     padding: 0 24px;
     border: none;
@@ -861,7 +859,9 @@ p {
     line-height: 1.5;
     letter-spacing: 0.04em;
     cursor: pointer;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 8px auto 0;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: center;
 }
 
 .modal-submit:hover,
@@ -869,16 +869,12 @@ p {
     background: var(--hover);
 }
 
-.modal-submit:active {
-    transform: translateY(1px);
-}
-
 .modal-submit-icon {
     width: 24px;
     height: 24px;
     margin-left: 16px;
     fill: currentColor;
-    flex-shrink: 0;
+    vertical-align: middle;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -958,7 +954,7 @@ p {
     outline-offset: 2px;
 }
 
-/* Utilities */
+/* UTILITIES */
 .mb-16 {
     margin-bottom: 16px !important;
 }
