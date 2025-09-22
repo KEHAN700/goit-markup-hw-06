@@ -886,7 +886,7 @@ p {
 /* CHECKBOX */
 .input-check-text {
     font-size: 12px;
-    line-height: 1.16667;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
     display: inline-flex;
@@ -896,7 +896,7 @@ p {
 
 .input-check-link {
     font-size: 12px;
-    line-height: 1.16667;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: var(--iris);
     text-decoration: underline;
@@ -918,6 +918,9 @@ p {
     opacity: 0;
     pointer-events: none;
 }
+
+.check-empty {
+    display: inline-flex;
 
 .check-empty {
     display: inline-flex;
