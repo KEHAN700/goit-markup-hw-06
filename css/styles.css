@@ -877,9 +877,6 @@ p {
     line-height: 1.16667;
     letter-spacing: 0.04em;
     color: #8e8f99;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
 }
 
 .input-check-link {
@@ -911,6 +908,7 @@ p {
     display: inline-flex;
     width: 16px;
     height: 16px;
+    margin-right: 8px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
     background: #fff;
