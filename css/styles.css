@@ -211,10 +211,7 @@ p {
     width: calc((100% - 72px)/4);
 }
 
-.field-block,
-.comment-block {
-    margin-bottom:16px;
-}
+
 
 .features-title {
     margin-bottom: 8px;
