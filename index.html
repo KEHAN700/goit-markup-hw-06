@@ -387,11 +387,12 @@
                 <form class="subscribe-form" novalidate>
                     <label class="subscribe-field">
                         <span class="visually-hidden">E-mail</span>
-                        <input type="email" class="subscribe-input" placeholder="E-mail" required autocomplete="email">
+                        <input type="email" name="user-email" class="subscribe-input" placeholder="E-mail" required
+                            autocomplete="email">
                     </label>
                     <button type="submit" class="subscribe-btn">
-                        <span class="subscribe-btn__text">Subscribe</span>
-                        <svg class="subscribe-btn__icon" width="20" height="20" aria-hidden="true">
+                        <span class="subscribe-btn-text">Subscribe</span>
+                        <svg class="subscribe-icon" width="24" height="24" aria-hidden="true">
                             <use href="./images/icons.svg#icon-icon-telegram"></use>
                         </svg>
                     </button>
@@ -402,7 +403,7 @@
     <div class="modal-overlay is-open" id="contact-modal">
         <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
             <button type="button" class="modal-close" data-close-modal aria-label="Close dialog">
-                <svg class="modal-close__icon" width="8" height="8" aria-hidden="true">
+                <svg class="modal-close-icon" width="8" height="8" aria-hidden="true">
                     <use href="./images/icons.svg#icon-close-black"></use>
                 </svg>
             </button>

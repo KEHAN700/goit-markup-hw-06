@@ -524,9 +524,10 @@ p {
     pointer-events: none;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(46, 47, 66, 0.4);
     display: none;
     z-index: 999;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-overlay.is-open {
@@ -541,6 +542,7 @@ p {
 
 .modal {
     top: 50%;
+    left: 50%;
     height: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
@@ -558,28 +560,21 @@ p {
 }
 
 .modal-close {
-    --close-size: 32px;
-    --close-bg-normal: #eef1f8;
-    --close-border-normal: #d2d7e2;
-    --close-bg-hover: var(--hover);
-    --close-x-normal: #2e2f42;
-    --close-x-hover: #ffffff;
-    --close-focus-ring: 0 0 0 3px rgba(64, 75, 191, .35);
     position: absolute;
-    top: 8px;
-    right: 8px;
-    width: var(--close-size);
-    height: var(--close-size);
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
     padding: 0;
-    border: 1px solid var(--close-border-normal);
+    border: 1px solid #d2d7e2;
     border-radius: 50%;
-    background: var(--close-bg-normal);
+    background: #eef1f8;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     line-height: 1;
-    color: var(--close-x-normal);
+    color: #2e2f42;
     -webkit-tap-highlight-color: transparent;
     transition:
         background-color .18s,
@@ -589,40 +584,28 @@ p {
         box-shadow .18s;
 }
 
-.modal-close__icon {
+.modal-close-icon {
     width: 8px;
     height: 8px;
-    width: 50%;
-    stroke: rgba(0, 0, 0, 0.1);
-    height: 50%;
     display: block;
     pointer-events: none;
+    stroke: rgba(0, 0, 0, 0.1);
 }
 
 .modal-close:hover,
 .modal-close:focus {
-    background-color: #404bbf;
-    border-color: var(--close-bg-hover);
-    color: var(--close-x-hover);
-    border-radius: 100%;
-    fill: #e7e9fc;
-    stroke-width: 1px;
-    stroke: rgba(0, 0, 0, 0.1);
+    background-color: var(--hover);
+    border-color: var(--hover);
+    color: #ffffff;
     outline: none;
-}
-
-.modal-close:focus-visible {
-    box-shadow: var(--close-focus-ring);
 }
 
 .modal-close:active {
     transform: scale(.92);
 }
 
-.modal-close:disabled {
-    opacity: .55;
-    cursor: not-allowed;
-    transform: none;
+.modal-close:focus-visible {
+    box-shadow: 0 0 0 3px rgba(64, 75, 191, .35);
 }
 
 .text-modal {
@@ -742,6 +725,7 @@ p {
     color: #fff;
     font-weight: 500;
     font-size: 16px;
+    line-height: 1.5;
     letter-spacing: 0.04em;
     cursor: pointer;
     margin: 8px auto 0;
@@ -797,15 +781,11 @@ p {
     background: #fff;
     align-items: center;
     justify-content: center;
-    transition: background-color .15s, border-color .15s, fill .15s;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-check-icon {
     fill: var(--cloud);
-}
-
-.input-check-icon use {
-    fill: currentColor;
 }
 
 .input-check:checked+.input-check-text .check-empty {
@@ -848,20 +828,23 @@ p {
 .subscribe-input {
     width: 264px;
     height: 40px;
-    background: transparent;
-    border: 1px solid #fff;
+    background-color: transparent;
+    border: 1px solid #ffffff;
     border-radius: 4px;
-    padding: 0 16px;
+    padding-left: 16px;
+    padding-right: 16px;
     font: inherit;
-    font-size: 14px;
-    line-height: 1.4;
-    color: #fff;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     box-sizing: border-box;
-    transition: border-color .2s, box-shadow .2s;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow .2s;
 }
 
 .subscribe-input::placeholder {
-    color: rgba(255, 255, 255, .85);
+    color: #ffffff;
 }
 
 .subscribe-input:hover {
@@ -890,6 +873,7 @@ p {
     color: #fff;
     transition: background-color .25s, transform .15s;
     white-space: nowrap;
+    padding: 0 24px;
 }
 
 .subscribe-btn:hover,
@@ -902,9 +886,14 @@ p {
     transform: translateY(1px);
 }
 
-.subscribe-btn__icon {
-    width: 20px;
-    height: 20px;
+.subscribe-btn-text {
+    display: inline-block;
+}
+
+.subscribe-icon {
+    width: 24px;
+    height: 24px;
     fill: currentColor;
+    margin-left: 16px;
     display: block;
 }
