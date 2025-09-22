@@ -744,7 +744,7 @@ p {
 }
 
 .field-block {
-    margin-bottom: 8px;
+    margin-bottom: 16px;
     display: flex;
     flex-direction: column;
     gap: 7px;
@@ -806,7 +806,7 @@ p {
 }
 
 .comment-block {
-    margin-bottom: 8px;
+    margin-bottom: 16px;
     display: flex;
     flex-direction: column;
     gap: 8px;
