@@ -388,10 +388,11 @@
             <div class="subscribe">
                 <p class="subscribe-title">Subscribe</p>
                 <form class="subscribe-form" novalidate>
+                    <!-- Переставлен input первым дочерним элементом label -->
                     <label class="subscribe-field">
-                        <span class="visually-hidden">E-mail</span>
                         <input type="email" name="user-email" class="subscribe-input" placeholder="E-mail" required
                             autocomplete="email">
+                        <span class="visually-hidden">E-mail</span>
                     </label>
                     <button type="submit" class="subscribe-btn">
                         <span class="subscribe-btn-text">Subscribe</span>
