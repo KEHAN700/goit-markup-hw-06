@@ -529,7 +529,7 @@ p {
 }
 
 .subscribe-title {
-    margin: 0;
+    margin: 0 0 16px 0;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -583,7 +583,11 @@ p {
 .subscribe-btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-width: 165px;
     height: 40px;
+    padding: 0 24px;
     background: var(--iris);
     border: none;
     border-radius: 4px;
@@ -592,11 +596,9 @@ p {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
-    letter-spacing: .02em;
-    color: #fff;
+    letter-spacing: 0.04em; color: #fff;
     transition: background-color .25s, transform .15s;
     white-space: nowrap;
-    padding: 0 24px;
 }
 
 .subscribe-btn:hover,
@@ -616,9 +618,12 @@ p {
 .subscribe-icon {
     width: 24px;
     height: 24px;
-    fill: currentColor;
     margin-left: 16px;
+    /* требование */
+    fill: currentColor;
     display: block;
+    flex-shrink: 0;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* MODAL OVERLAY */
