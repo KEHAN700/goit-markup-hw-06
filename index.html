@@ -20,9 +20,7 @@
             <nav class="nav-main">
                 <a href="./index.html" class="nav-logo">Web<span class="logo-accent">Studio</span></a>
                 <ul class="nav-menu">
-                    <li class="menu-item">
-                        <a href="./index.html" class="menu-link active-link">Studio</a>
-                    </li>
+                    <li class="menu-item"><a href="./index.html" class="menu-link active-link">Studio</a></li>
                     <li class="menu-item"><a href="#portfolio" class="menu-link">Portfolio</a></li>
                     <li class="menu-item"><a href="#contacts" class="menu-link">Contacts</a></li>
                 </ul>
@@ -39,6 +37,7 @@
             </address>
         </div>
     </header>
+
     <main>
         <section class="hero-section">
             <div class="hero-content">
@@ -46,6 +45,7 @@
                 <button type="button" class="hero-btn" data-open-modal>Order Service</button>
             </div>
         </section>
+
         <section class="features-section">
             <div class="container">
                 <h2 class="visually-hidden">Features</h2>
@@ -93,6 +93,7 @@
                 </ul>
             </div>
         </section>
+
         <section class="team-section">
             <div class="container">
                 <h2 class="team-title">Our Team</h2>
@@ -248,6 +249,7 @@
                 </ul>
             </div>
         </section>
+
         <section class="portfolio-section" id="portfolio">
             <div class="container">
                 <h2 class="portfolio-title">Our Portfolio</h2>
@@ -340,6 +342,7 @@
             </div>
         </section>
     </main>
+
     <footer class="footer-section">
         <div class="footer-container">
             <div class="footer-left">
@@ -392,7 +395,7 @@
                     </label>
                     <button type="submit" class="subscribe-btn">
                         <span class="subscribe-btn-text">Subscribe</span>
-                        <svg class="subscribe-icon" width="24" height="24" aria-hidden="true">
+                        <svg class="subscribe-icon" width="24" height="24">
                             <use href="./images/icons.svg#icon-icon-telegram"></use>
                         </svg>
                     </button>
@@ -400,6 +403,8 @@
             </div>
         </div>
     </footer>
+
+    <!-- MODAL -->
     <div class="modal-overlay is-open" id="contact-modal">
         <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
             <button type="button" class="modal-close" data-close-modal aria-label="Close dialog">
@@ -409,7 +414,7 @@
             </button>
             <p class="text-modal" id="modal-title">Leave your contacts and we will call you back</p>
             <form class="modal-form" novalidate>
-                <div class="field-block">
+                <div class="field-block mb-16">
                     <label class="modal-label" for="user-name">Name</label>
                     <div class="field-wrapper">
                         <input type="text" id="user-name" name="user-name" class="field-input" required
@@ -419,7 +424,7 @@
                         </svg>
                     </div>
                 </div>
-                <div class="field-block">
+                <div class="field-block mb-16">
                     <label class="modal-label" for="user-phone">Phone</label>
                     <div class="field-wrapper">
                         <input type="text" id="user-phone" name="user-phone" class="field-input" required
@@ -429,7 +434,7 @@
                         </svg>
                     </div>
                 </div>
-                <div class="field-block">
+                <div class="field-block mb-16">
                     <label class="modal-label" for="user-email">Email</label>
                     <div class="field-wrapper">
                         <input type="email" id="user-email" name="user-email" class="field-input" required
@@ -439,27 +444,32 @@
                         </svg>
                     </div>
                 </div>
-                <div class="field-block">
+                <div class="field-block mb-24">
                     <label class="modal-label" for="user-comment">Comment</label>
                     <div class="textarea-wrapper">
-                        <textarea id="user-comment" name="user-comment" class="field-textarea" placeholder="Text input"
-                            rows="5"></textarea>
+                        <textarea id="user-comment" name="user-comment" class="field-textarea"
+                            placeholder="Text input"></textarea>
                     </div>
                 </div>
-                <div class="modal-field check-field">
+                <div class="modal-field check-field mb-24">
                     <input class="input-check visually-hidden" id="user-privacy" name="user-privacy" type="checkbox"
                         value="true" />
                     <label class="input-check-text" for="user-privacy">
                         <span class="check-empty">
-                            <svg class="input-check-icon" width="10" height="8">
+                            <svg class="input-check-icon" width="10" height="8" aria-hidden="true">
                                 <use href="./images/icons.svg#icon-check"></use>
                             </svg>
                         </span>
                         I accept the terms and conditions of the
-                        <a class="input-check-link" href>Privacy Policy</a>
+                        <a class="input-check-link" href="#">Privacy Policy</a>
                     </label>
                 </div>
-                <button type="submit" class="modal-submit">Send</button>
+                <button type="submit" class="modal-submit">
+                    Send
+                    <svg class="modal-submit-icon" width="24" height="24" aria-hidden="true">
+                        <use href="./images/icons.svg#icon-send"></use>
+                    </svg>
+                </button>
             </form>
         </div>
     </div>
