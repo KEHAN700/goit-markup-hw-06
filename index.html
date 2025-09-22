@@ -475,38 +475,6 @@
             </form>
         </div>
     </div>
-
-    <script>
-        const modal = document.getElementById('contact-modal');
-        const openBtn = document.querySelector('[data-open-modal]');
-        const closeBtn = document.querySelector('[data-close-modal]');
-
-        function openModal() {
-            modal.classList.remove('is-hidden');
-            document.body.style.overflow = 'hidden';
-            const firstField = modal.querySelector('input, textarea');
-            if (firstField) setTimeout(() => firstField.focus(), 50);
-        }
-
-        function closeModal() {
-            modal.classList.add('is-hidden');
-            document.body.style.overflow = '';
-            if (openBtn) openBtn.focus();
-        }
-
-        openBtn.addEventListener('click', openModal);
-        closeBtn.addEventListener('click', closeModal);
-
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) closeModal();
-        });
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !modal.classList.contains('is-hidden')) {
-                closeModal();
-            }
-        });
-    </script>
 </body>
 
 </html>
