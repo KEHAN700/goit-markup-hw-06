@@ -834,3 +834,9 @@ img {
     background-color: #4d5ae5;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.btn-modal .button-icon {
+    margin: 0;
+    flex-shrink: 0;
+    display: block;
+}
