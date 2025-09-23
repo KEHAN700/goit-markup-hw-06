@@ -150,7 +150,7 @@ img {
     background: #2e2f42;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)),
-        url(../images/people-office.jpg);
+        url(../images/office.jpg);
     max-width: 1440px;
     margin: 0 auto;
     background-repeat: no-repeat;
@@ -456,6 +456,12 @@ img {
     color: #434455;
 }
 
+.portfolio-subtitle,
+.portfolio-subtitle a,
+.portfolio-subtitle a:visited {
+    color: #000;
+}
+
 .portfolio-subtitle-desc {
     padding: 32px 16px;
     border: 1px solid #e7e9fc;
@@ -614,6 +620,7 @@ img {
 
 .icon-telegram-btn {
     margin-left: 16px;
+    fill: #fff;
 }
 
 /*-------MODAL-------*/
